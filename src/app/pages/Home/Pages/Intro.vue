@@ -14,7 +14,7 @@ import {
 
 // themeMode is a Ref<string>; script needs .value, template unwraps automatically
 function onCarouselValueChange(index: number) {
-    (themeMode as any).value = themes[index].name.toLowerCase()
+    (themeMode as any).value = themes[index].name.toLowerCase() // Incredibly unsafe, but completely fine for a template.
 }
 
 const themes = [
